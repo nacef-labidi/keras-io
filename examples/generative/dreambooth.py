@@ -253,7 +253,7 @@ for i, caption in enumerate(itertools.chain(instance_prompts, class_prompts)):
 POS_IDS = tf.convert_to_tensor([list(range(max_prompt_length))], dtype=tf.int32)
 text_encoder = keras_cv.models.stable_diffusion.TextEncoder(max_prompt_length)
 
-gpus = tf.config.list_logical_devices("GPU")
+gpus = tf.config.list_logical_devices("CPU")
 
 # Ensure the computation takes place on a GPU.
 # Note that it's done automatically when there's a GPU present.
