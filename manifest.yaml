@@ -2,7 +2,7 @@ kind: AIchorManifest
 apiVersion: 0.2.2
 
 builder:
-    image: keras-demo
+  image: keras-demo
   dockerfile: ./Dockerfile
   context: .
   buildArgs:
