@@ -2,7 +2,7 @@ kind: AIchorManifest
 apiVersion: 0.2.2
 
 builder:
-  image: keras-demo
+  image: efficientnet
   dockerfile: ./Dockerfile
   context: .
   buildArgs:
@@ -10,24 +10,23 @@ builder:
 
 spec:
   operator: tf
-  image: keras-demo
-  command: python examples/generative/vae.py
+  image: efficientnet
+  command: "python train.py"
 
-  tensorboard: # optional, disabled by default
+  tensorboard: # optional disabled by default
     enabled: true
 
-  # Available types are: Worker, Master, PS, Chief, Evaluator
   types:
     Worker:
       count: 1
       resources:
         cpus: 8
         ramRatio: 2
-
         accelerators: # optional
           gpu:
             count: 1
             # options: gpu, mig-1g.10gb, mig-3g.20gb, mig-3g.40gb,
             type: gpu
             # options: Tesla-V100-SXM3-32GB, A100-SXM4-40GB, A100-SXM-80GB
+            #product: A100-SXM4-80GB
             product: nvidia-tesla-v100
