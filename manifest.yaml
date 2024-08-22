@@ -11,7 +11,7 @@ builder:
 spec:
   operator: tf
   image: keras-demo
-  command: python examples/generative/finetune_stable_diffusion.py
+  command: python examples/generative/vae.py
 
   tensorboard: # optional, disabled by default
     enabled: true
