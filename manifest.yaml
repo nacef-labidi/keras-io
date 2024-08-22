@@ -26,7 +26,7 @@ spec:
 
         accelerators: # optional
           gpu:
-            count: 0
+            count: 1
             # options: gpu, mig-1g.10gb, mig-3g.20gb, mig-3g.40gb,
             type: gpu
             # options: Tesla-V100-SXM3-32GB, A100-SXM4-40GB, A100-SXM-80GB
