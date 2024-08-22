@@ -145,8 +145,10 @@ if __name__ == "__main__":
 
     # log_dir = os.path.join(LOGS_PATH, datetime.datetime.now().strftime("%Y%m%d-%H%M%S"))
     # log_dir = "s3://tensorboard-2309057bc0e04398-outputs/logs/" + EXPERIMENT_ID + "/" + datetime.datetime.now().strftime("%Y%m%d-%H%M%S")
-    log_dir = f"az://{os.environ['TF_AZURE_STORAGE_ACCOUNT_NAME']}/{os.environ['AICHOR_OUTPUT_BUCKET_NAME']}/logs/{os.environ['AICHOR_EXPERIMENT_ID']}"
-    output_path = f"az://{os.environ['TF_AZURE_STORAGE_ACCOUNT_NAME']}/{os.environ['AICHOR_OUTPUT_BUCKET_NAME']}/output/{os.environ['AICHOR_EXPERIMENT_ID']}"
+    # log_dir = f"az://{os.environ['TF_AZURE_STORAGE_ACCOUNT_NAME']}/{os.environ['AICHOR_OUTPUT_BUCKET_NAME']}/logs/{os.environ['AICHOR_EXPERIMENT_ID']}"
+    # output_path = f"az://{os.environ['TF_AZURE_STORAGE_ACCOUNT_NAME']}/{os.environ['AICHOR_OUTPUT_BUCKET_NAME']}/output/{os.environ['AICHOR_EXPERIMENT_ID']}"
+    log_dir = "./logs"
+    output_path = "./outputs"
     tensorboard_callback = tf.keras.callbacks.TensorBoard(log_dir=log_dir, histogram_freq=1)
 
     model.fit(
