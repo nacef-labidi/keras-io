@@ -15,3 +15,4 @@ keras-tuner
 keras-cv
 tf_keras
 keras-nlp
+keras==3.5.0
