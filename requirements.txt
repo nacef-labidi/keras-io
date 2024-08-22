@@ -15,4 +15,4 @@ keras-cv==0.4.1
 keras-nlp==0.4.0
 pycocotools
 imutils
-opencv-python
+opencv-python-headless
